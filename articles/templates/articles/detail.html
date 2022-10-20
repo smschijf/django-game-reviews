@@ -1,0 +1,14 @@
+{% extends 'index.html' %} {% block content %}
+<h1>{{ article.article_title }}</h1>
+<h2>{{ article.article_sub_title }}</h2>
+<img class="article-banner" src="{{ article.article_banner.url }}" />
+<div class="pub-date">
+  <i class="bx bx-file" style="color: #ffffff"></i>
+  Posted: {{ article.article_pub_date }} &nbsp;&nbsp;
+  <i class="bx bxs-upvote" style="color: #ffffff"></i>
+  Votes: {{ article.article_votes }}
+</div>
+<hr />
+<p class="article-body">{{ article.article_body }}</p>
+
+{% endblock %}

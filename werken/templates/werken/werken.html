@@ -1,0 +1,6 @@
+{% extends 'index.html' %} {% block content %}
+<h1>werken</h1>
+{% for werken in werken.all %}
+<img src="{{ werken.image.url }}" />
+<h6>{{ werken.body }}</h6>
+{% endfor %} {% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'index.html' %} {% block content %}
+<h2>Aanmelden</h2>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Aanmelden</button>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'index.html' %} {% block content %} {% if error %}
+<div class="alert alert-danger" role="alert">{{ error }}</div>
+{% endif %}
+
+<h1>Toevoegen van werk</h1>
+
+<form
+  class=""
+  action="{% url 'create' %}"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %} Title <br />
+  <input type="text" name="title" />
+  <br />
+  Body<br />
+  <input type="text" name="body" />
+  <br />url <br />
+  <input type="text" name="url" />
+  <br />image <br />
+  <input type="file" name="image" accept="image/jpeg" />
+  <br />Icon <br />
+  <input type="file" name="icon" accept="image/*" />
+  <br />
+  <br />
+  <input type="submit" value="add" />
+</form>
+{% endblock %}
