@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 media
+portfolio/settings.py
 
 # Backup files # 
 *.bak 
